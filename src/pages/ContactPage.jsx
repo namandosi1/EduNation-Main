@@ -4,7 +4,7 @@ import { BsGlobeAmericas } from 'react-icons/bs';
 import { IoIosCall } from 'react-icons/io';
 import ContactUsForm from '../components/ContactPage/ContactUsForm';
 import Footer from '../components/common/Footer';
-// import ReviewSlider from "../components/common/ReviewSlider"
+import ReviewSlider from "../components/common/ReviewSlider"
 const ContactPage = () => {
     const contactData = [
         {
@@ -58,7 +58,7 @@ const ContactPage = () => {
         
         <div className='relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white'>
         <h1 className="text-center text-4xl font-semibold mt-8">Reviews From Other Learners</h1>
-        {/* <ReviewSlider /> */}
+        <ReviewSlider />
         </div>
         
         <Footer/>
