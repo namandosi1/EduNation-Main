@@ -1,34 +1,50 @@
-import React from 'react'
-import { BsFillPeopleFill } from 'react-icons/bs';
-import { TbHierarchy3 } from 'react-icons/tb';
+import React from "react";
 
-const CourseCard = ({cardData,currentCard,}) => {
+// Importing React Icons
+import { HiUsers } from "react-icons/hi";
+import { ImTree } from "react-icons/im";
+
+const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
   return (
-    <div className={` w-[360px] lg:w-[30%] h-[300px] box-border cursor-pointer
-     ${currentCard === cardData.heading ? "bg-white shadow-[12px_12px_0_0] shadow-yellow-50  text-richblack-25" 
-     : "bg-richblack-800  text-richblack-25"}`}>
-
-        <div className='flex flex-col gap-3 p-6 border-b-[2px] border-richblack-400 border-dashed h-[80%]'>
-            <p className={`font-semibold text-[20px]  
-                ${currentCard === cardData.heading ? "text-richblack-800": ""}`}>
-                {cardData.heading}
-            </p>
-            <p className="text-richblack-400">{cardData.description}</p>
+    <div
+      className=  {`w-[360px] lg:w-[30%] ${
+        currentCard === cardData?.heading
+          ? "bg-white shadow-[12px_12px_0_0] shadow-yellow-50"
+          : "bg-richblack-800"
+      }  text-richblack-25 h-[300px] box-border cursor-pointer maindiv  `}
+      onClick={() => setCurrentCard(cardData?.heading)}
+    >
+      <div className=" border-b-[2px] border-richblack-400 border-dashed h-[80%] p-6 flex flex-col gap-3">
+        <div
+          className={` ${
+            currentCard === cardData?.heading && "text-richblack-800"
+          } font-semibold text-[20px] `}
+        >
+          {cardData?.heading}
         </div>
 
-        <div className={`flex flex-row justify-between px-6 py-3 font-medium
-        ${currentCard === cardData.heading ? " text-blue-300": " text-richblack-300"} `}>
-            <div className='flex items-center gap-2 text-[16px]'>
-                <BsFillPeopleFill/>
-                <span>{cardData.level}</span>
-            </div>
-            <div className='flex items-center gap-2 text-[16px]'>
-                <TbHierarchy3/>
-                <span>{cardData.lessionNumber} Lessons</span>
-            </div>
+        <div className="text-richblack-400">{cardData?.description}</div>
+      </div>
+
+      <div
+        className={`flex justify-between ${
+          currentCard === cardData?.heading ? "text-blue-300" : "text-richblack-300"
+        } px-6 py-3 font-medium`}
+      >
+        {/* Level */}
+        <div className="flex items-center gap-2 text-[16px]">
+          <HiUsers />
+          <p>{cardData?.level}</p>
         </div>
+
+        {/* Flow Chart */}
+        <div className="flex items-center gap-2 text-[16px]">
+          <ImTree />
+          <p>{cardData?.lessionNumber} Lession</p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CourseCard
+export default CourseCard;
