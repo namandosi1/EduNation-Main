@@ -4,7 +4,7 @@ import { BsGlobeAmericas } from 'react-icons/bs';
 import { IoIosCall } from 'react-icons/io';
 import ContactUsForm from '../components/ContactPage/ContactUsForm';
 import Footer from '../components/common/Footer';
-// import ReviewSlider from "../components/common/ReviewSlider"
+import ReviewSlider from "../components/common/ReviewSlider"
 const ContactPage = () => {
     const contactData = [
         {
