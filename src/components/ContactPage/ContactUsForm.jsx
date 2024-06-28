@@ -54,7 +54,7 @@ const ContactUsForm = () => {
                         name='firstname'
                         id='firstname'
                         placeholder='Enter first name'
-                        className='text-white form-style'
+                        className='text-black form-style'
                         {...register("firstname", {required:true})}
                     />
                     {
@@ -73,7 +73,7 @@ const ContactUsForm = () => {
                         type='text'
                         name='lastname'
                         id='lastname'
-                        className='text-white form-style'
+                        className='text-black form-style'
                         placeholder='Enter Last name'
                         {...register("lastname")}
                     />
